@@ -1,0 +1,191 @@
+@media (max-width: 1264px) {
+  .header .search #ip_field {
+    width: 50vw !important;
+  }
+  .header .info {
+    width: 70vw !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .header .info {
+    width: 85vw !important;
+  }
+}
+
+@media (max-width: 740px) {
+  .header h1 {
+    font-size: 22px !important;
+  }
+  .header .search #ip_field {
+    width: 79vw !important;
+  }
+  .header .info {
+    opacity: 0.9;
+    width: 90vw !important;
+    -webkit-transform: translate(0, -30%) !important;
+            transform: translate(0, -30%) !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .info * {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    text-align: center;
+  }
+  .header .info div {
+    margin-bottom: 1rem !important;
+  }
+  .header .info div span {
+    display: block;
+    margin-bottom: 0.5rem !important;
+  }
+  .header .info div:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.header {
+  position: relative;
+  background-image: url("../images/pattern-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.6rem 0;
+  gap: 1.6rem;
+  z-index: 999;
+}
+
+.header h1 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: 0;
+}
+
+.header .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: transparent;
+  margin-bottom: 6rem;
+}
+
+.header .search input[type=text],
+.header .search button {
+  border: none;
+  outline: none;
+  padding: 16px 20px;
+}
+
+.header .search input[type=text] *,
+.header .search button * {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.header .search #ip_field {
+  font-family: 'Rubik', sans-serif;
+  border-radius: 12px 0 0 12px;
+  background-color: #ffffff;
+  color: #2b2b2b;
+  width: 29.3vw;
+  font-size: 16px;
+}
+
+.header .search #btn_go {
+  border-radius: 0 12px 12px 0;
+  background-color: #000;
+  cursor: pointer;
+  -webkit-transition: background-color 100ms ease-in;
+  transition: background-color 100ms ease-in;
+}
+
+.header .search #btn_go:hover {
+  background-color: #2b2b2b;
+}
+
+.header .search #btn_go:active {
+  background-color: black;
+}
+
+.header .info {
+  position: absolute;
+  top: 100%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 12px;
+  padding: 1.5rem;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  width: 50vw;
+}
+
+.header .info div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0px;
+  border-right: 1px solid #969696;
+  padding: 0 1.5rem;
+}
+
+.header .info div span {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #969696;
+}
+
+.header .info div h2 {
+  font-weight: 500;
+  font-size: 25px;
+  margin-top: 0.5rem;
+  color: #2b2b2b;
+}
+
+.header .info div:first-child {
+  padding-left: 0;
+}
+
+.header .info div:last-child {
+  padding-right: 0;
+  border: none;
+}
+
+#mapid {
+  height: 470px;
+}

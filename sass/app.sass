@@ -1,0 +1,97 @@
+@import 'queries'
+
+//variables
+$very-dark-gray: hsl(0, 0%, 17%)
+$dark-gray: hsl(0, 0%, 59%)
+$border-radius: 12px
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    width: 100vw
+    height: 100vh
+    font-family: 'Rubik', sans-serif
+    font-size: 18px
+    overflow: hidden
+
+.header
+    position: relative
+
+    background-image: url('../images/pattern-bg.png')
+    background-repeat: no-repeat
+    background-size: 100% 100%
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 1.6rem 0
+    gap: 1.6rem
+
+    z-index: 999
+    h1
+        color: #fff
+        font-weight: 500
+        font-size: 28px
+        letter-spacing: 0
+    .search
+        display: flex
+        justify-content: space-around
+        background-color: transparent
+        margin-bottom: 6rem
+        input[type = text],
+        button
+            border: none
+            outline: none
+            padding: 16px 20px
+            *
+                transform: scale(0.9)
+        #ip_field
+            font-family: 'Rubik', sans-serif
+            border-radius: $border-radius 0 0 $border-radius
+            background-color: #ffffff
+            color: $very-dark-gray
+            width: 29.3vw
+            font-size: 16px
+        #btn_go
+            border-radius: 0 $border-radius $border-radius 0
+            background-color: #000
+            cursor: pointer
+            transition: background-color 100ms ease-in
+            &:hover
+                background-color: $very-dark-gray
+            &:active
+                background-color: darken($very-dark-gray, 20%)
+    .info
+        position: absolute
+        top: 100%
+        transform: translate(0, -50%)
+        background-color: #fff
+        display: flex
+        border-radius: $border-radius
+        padding: 1.5rem
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2)
+        width: 50vw
+        div
+            flex: 1 1 0px
+            border-right: 1px solid $dark-gray
+            padding: 0 1.5rem
+            span
+                font-size: 12px
+                font-weight: 700
+                text-transform: uppercase
+                letter-spacing: 1px
+                color: $dark-gray
+            h2
+                font-weight: 500
+                font-size: 25px
+                margin-top: 0.5rem
+                color: $very-dark-gray
+        div:first-child
+            padding-left: 0
+        div:last-child
+            padding-right: 0
+            border: none
+#mapid
+    height: 470px
